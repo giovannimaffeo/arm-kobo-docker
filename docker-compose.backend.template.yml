@@ -5,7 +5,7 @@ version: '2.2'
 
 services:
   postgres:
-    image: postgis/postgis:14-3.2
+    image: imresamu/postgis-arm64:latest
     hostname: postgres
     env_file:
       - ../kobo-env/envfile.txt
@@ -21,7 +21,7 @@ services:
     stop_grace_period: 5m
 
   mongo:
-    image: mongo:5.0
+    image: arm64v8/mongo:3.6
     hostname: mongo
     environment:
       - MONGO_DATA=/data/db
